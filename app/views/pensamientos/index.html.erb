@@ -1,0 +1,23 @@
+<h1>Listing pensamientos</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pensamientos.each do |pensamiento| %>
+  <tr>
+    <td><%= pensamiento.descripcion %></td>
+    <td><%= link_to 'Show', pensamiento %></td>
+    <td><%= link_to 'Edit', edit_pensamiento_path(pensamiento) %></td>
+    <td><%= link_to 'Destroy', pensamiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pensamiento', new_pensamiento_path %>
