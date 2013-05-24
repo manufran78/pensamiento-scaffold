@@ -3,7 +3,7 @@ PensamientoScaffold::Application.routes.draw do
   resources :pensamientos
 
 
-root :to => "pensamientos#index"
+root :to => "pensamientos#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
